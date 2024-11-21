@@ -17,7 +17,7 @@ def santa_response(user_input):
         model="gpt-4o-mini",
         messages=[
             {"role": "user",
-             "content": f"How would Santa Claus answer this:{inp}. Answer as if you were Santa Claus."}
+             "content": f"How would Santa Claus answer this:{inp}. Answer as if you were Santa Claus. Make sure to exclude any emoji's and any other non-words."}
         ]
     )
     santasays = completion.choices[0].message.content
